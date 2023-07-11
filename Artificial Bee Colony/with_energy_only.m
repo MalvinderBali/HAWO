@@ -1,0 +1,11 @@
+nVar=n1*R;             % Number of Decision Variables
+VarSize=[1 nVar];   % Decision Variables Matrix Size
+s=n1*R;
+lb=-1.*ones(1,s);
+ub=ones(1,s);
+x0 = (lb+ub)/2;
+A = [];
+b = [];
+Aeq = [];
+beq = [];
+x = fmincon(@Copy_of_for_task,x0,A,b,Aeq,beq,lb,ub);
